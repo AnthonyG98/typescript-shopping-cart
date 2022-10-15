@@ -1,0 +1,19 @@
+.nav-container{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+.link {
+    color: #111;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 2em;
+    transition: 0.3s ease;
+}
+.link:hover {
+    color: rgb(96, 178, 163);
+    transition: 0.3s ease;
+}
