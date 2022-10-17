@@ -1,10 +1,15 @@
 .nav-container{
-    width: 30%;
+    width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+.link-container {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
 }
 .link {
     color: #111;
@@ -16,4 +21,25 @@
 .link:hover {
     color: rgb(96, 178, 163);
     transition: 0.3s ease;
+}
+#cart-btn {
+    position: relative;
+}
+.fa-cart-shopping{
+    color: #111;
+    font-size: 35px;
+}
+.qty-container {
+    width: 22px;
+    height: 22px;
+    bottom: 5%;
+    background-color: rgb(187, 0, 0);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 50%;
 }
