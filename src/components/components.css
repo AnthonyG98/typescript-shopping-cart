@@ -49,6 +49,7 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    margin-bottom: 5%;
     flex-direction: column;
 }
 .store-prop-img-container{
@@ -74,4 +75,22 @@
 }
 .prop-price {
     color: rgb(126, 126, 126);
+}
+.add-btn-container {
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center ;
+}
+.add-btn {
+    background-color: rgb(96, 178, 163);
+    width: 100%;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
