@@ -1,3 +1,4 @@
+import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency"
 
 type StoreItemProps = {
@@ -8,7 +9,8 @@ type StoreItemProps = {
 }
 
 export function StoreItem({id, name, price, imgUrl}: StoreItemProps){
-    const quantity = 3;
+    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
+    const quantity = getItemQuantity(id);
     return (
         <>
         <div className="store-prop-container">
@@ -21,14 +23,14 @@ export function StoreItem({id, name, price, imgUrl}: StoreItemProps){
             </div>
             <div className="add-btn-container">
                 {
-                    quantity === 0 ? <button className="add-btn">ADD TO CART</button> : 
+                    quantity === 0 ? <button className="add-btn" onClick={()=> increaseCartQuantity(id)}>ADD TO CART</button> : 
                     <div className="adjust-btn-container">
                         <div className="adjust-btn">
-                            <button className="adjust">-</button>
+                            <button className="adjust" onClick={()=> decreaseCartQuantity(id)}>-</button>
                             <p>{quantity} in cart.</p>
-                            <button className="adjust">+</button>
+                            <button className="adjust" onClick={()=> increaseCartQuantity(id)}>+</button>
                         </div>
-                        <div className="remove-btn">
+                        <div className="remove-btn" onClick={()=> removeFromCart(id)}>
                             REMOVE
                         </div>
                     </div>
