@@ -7,12 +7,12 @@ export function Navbar(){
         <>
         <div className="nav-container">
             <div className="cart-container">
-                <Link to="/cart" className="link" id="cart-btn" onClick={openCart}>                
+                <div to="/cart" className="link" id="cart-btn" onClick={openCart}>                
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div className="qty-container">
                             {cartQuantity}
                     </div>
-                </Link>
+                </div>
             </div>
             <div className="link-container">
                 <Link className="link" to="/">HOME</Link>
