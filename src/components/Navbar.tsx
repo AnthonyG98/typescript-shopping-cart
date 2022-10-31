@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom"
+import { useShoppingCart } from "../context/ShoppingCartContext"
 import "./components.css"
 export function Navbar(){
+    const {openCart, cartQuantity} = useShoppingCart();
     return(
         <>
         <div className="nav-container">
             <div className="cart-container">
-                <Link to="/cart" className="link" id="cart-btn">                
+                <Link to="/cart" className="link" id="cart-btn" onClick={openCart}>                
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div className="qty-container">
-                            0
+                            {cartQuantity}
                     </div>
                 </Link>
             </div>
