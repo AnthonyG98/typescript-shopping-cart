@@ -7,7 +7,7 @@ export function Navbar(){
         <>
         <div className="nav-container">
             <div className="cart-container">
-                <div to="/cart" className="link" id="cart-btn" onClick={openCart}>                
+                <div className="link" id="cart-btn" onClick={openCart}>                
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div className="qty-container">
                             {cartQuantity}

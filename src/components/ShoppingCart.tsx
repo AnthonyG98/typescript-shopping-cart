@@ -2,12 +2,12 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { CartItem } from "./CartItem";
 
 export function ShoppingCart(){
-    const {closeCart, cartItems} = useShoppingCart();
+    const {openCart, closeCart, cartItems} = useShoppingCart();
     return(
         <>
-        <div className="nav-cart-container">
+        <div className="nav-cart-container" id="nav-cart" onClick={()=>{openCart()}}>
             <div className="nav-cart-head">
-                <h1>CART</h1>
+                <h1 className="cart-head">CART</h1>
             </div>
             <div className="cart-content-container">
             {
