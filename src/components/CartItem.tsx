@@ -11,15 +11,18 @@ export function CartItem({id, quantity}: CartItemProps){
     if(item == null) return null
 
     return(
+        <>
         <div className="cartItem-container">
             <img src={item.imgUrl} className="item-cart-img"/>
             <div className="cart-details">
-                <h1 className="cart-head">{item.name}</h1>
-                <p>x{quantity}</p>
+                <div className="cart-head-container">
+                    <h1 className="cart-head">{item.name}</h1>
+                    <p className="quantity">x{quantity}</p>
+                </div>
                 <p>{formatCurrency(item.price)}</p>
-                <p>{formatCurrency(item.price * quantity)}</p>
-                <button onClick={()=>{removeFromCart(item.id)}}>REMOVE</button>
+                <button onClick={()=>{removeFromCart(item.id)}} className="remove-cart-btn">REMOVE</button>
             </div>
         </div>
+    </>
     )
 }
